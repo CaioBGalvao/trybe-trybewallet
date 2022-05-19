@@ -1,4 +1,4 @@
-import { LOGIN_WALLET } from '../actions/loginWallet';
+import { LOGIN_ACTION } from '../actions/loginAction';
 
 const INITIAL_STATE = {
   email: '',
@@ -6,7 +6,7 @@ const INITIAL_STATE = {
 
 const user = (state = INITIAL_STATE, action) => {
   switch (action.type) {
-  case LOGIN_WALLET:
+  case LOGIN_ACTION:
     return {
       ...state,
       email: action.payload,
