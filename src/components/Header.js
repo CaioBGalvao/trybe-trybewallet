@@ -10,21 +10,19 @@ class Header extends Component {
         <h4
           data-testid="email-field"
         >
+          Email:
           { userEmail }
         </h4>
         <h5
           data-testid="total-field"
         >
-          `$
+          Despesa mensal: R$
           {0}
-          `
-
         </h5>
         <h5
           data-testid="header-currency-field"
         >
           BRL
-
         </h5>
       </>
     );
