@@ -10,7 +10,6 @@ export const currencyFetchButton = (expenses) => async (dispatch) => {
   try {
     const response = await fetch('https://economia.awesomeapi.com.br/json/all');
     const result = await response.json();
-
     const currencys = {
       ...expenses,
       exchangeRates: result,
