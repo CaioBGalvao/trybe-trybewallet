@@ -4,6 +4,8 @@ import PropTypes from 'prop-types';
 import { currencyFetch } from '../actions/currencyFetchAction';
 import { currencyFetchButton } from '../actions/formButton';
 
+const alimentacao = 'Alimentação';
+
 class Form extends Component {
   constructor() {
     super();
@@ -11,9 +13,9 @@ class Form extends Component {
     this.state = {
       id: 0,
       value: '',
-      currency: '',
-      method: '',
-      tag: '',
+      currency: 'USD',
+      method: 'Dinheiro',
+      tag: alimentacao,
       description: '',
     };
   }
@@ -40,9 +42,9 @@ class Form extends Component {
     stateSubmit(this.state);
     this.setState(() => ({
       value: '',
-      currency: '',
-      method: '',
-      tag: '',
+      currency: 'USD',
+      method: 'Dinheiro',
+      tag: alimentacao,
       description: '',
     }));
   }
@@ -116,7 +118,7 @@ class Form extends Component {
             onChange={ this.formHandler }
             data-testid="tag-input"
           >
-            <option value="Alimentação">Alimentação</option>
+            <option value={ alimentacao }>Alimentação</option>
             <option value="Lazer">Lazer</option>
             <option value="Trabalho">Trabalho</option>
             <option value="Transporte">Transporte</option>
