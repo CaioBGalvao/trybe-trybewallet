@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { v4 as uuid } from 'uuid';
 import TableLine from './TableLine';
-
+// erro esLint?
 class Table extends Component {
   render() {
     const { expenses } = this.props;
